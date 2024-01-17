@@ -1,0 +1,29 @@
+% ---------------- GENERAL PREAMBLE SETTINGS ------------------------------------------
+\makeatletter 
+\def\input@path{ {sections/} {preamble/} {frontbackmatter/}} 
+
+\newcommand*{\documenttype}[1]{\gdef\@documenttype{#1}}
+\newcommand*{\@documenttype}{Vollmacht}
+\newcommand*{\birthday}[1]{\gdef\@birthday{#1}}
+\newcommand*{\bday}[1]{\gdef\@bday{#1}}
+\newcommand*{\name}[1]{\gdef\@name{#1}}
+\newcommand*{\street}[1]{\gdef\@street{#1}}
+\newcommand*{\city}[1]{\gdef\@city{#1}}
+\makeatother
+
+\input{packages}
+\input{commands}
+
+\graphicspath{ {figures/} }
+
+
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1pt\hfill \kern \z@}
+
+\newfontfamily\ubuntu{Ubuntu}
+\newfontfamily\dejavu{DejaVuSans}
+
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\pagenumbering{gobble}
+
+\input{titlepage}
